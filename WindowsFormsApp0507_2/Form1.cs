@@ -31,6 +31,7 @@ namespace WindowsFormsApp0507_2
             chart1.ChartAreas[0].RecalculateAxesScale();
         }
         Random rand = new Random();
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             double randNum = rand.NextDouble() * 10.0;
