@@ -33,10 +33,21 @@ namespace WindowsFormsApp0507_2
         Random rand = new Random();
         private void timer1_Tick(object sender, EventArgs e)
         {
-            double randNum = rand.NextDouble() * 10.0;
-            if (chart1.Series[0].Points.Count > 50) chart1.Series[0].Points.RemoveAt(0);
-            chart1.Series[0].Points.AddXY(DateTime.Now.ToString(), randNum);
+            double randNum1 = rand.NextDouble() * 10.0;
+            double randNum2 = rand.NextDouble() * 10.0;
+            double randNum3 = rand.NextDouble() * 100.0;
+            double randNum4 = rand.NextDouble() * 100.0;
+            if (chart1.Series[0].Points.Count > 20) chart1.Series[0].Points.RemoveAt(0);
+            if (chart1.Series[1].Points.Count > 20) chart1.Series[1].Points.RemoveAt(0);
+            chart1.Series[0].Points.AddXY(DateTime.Now.ToString(), randNum1);
+            chart1.Series[1].Points.AddXY(DateTime.Now.ToString(), randNum2);
             chart1.ChartAreas[0].RecalculateAxesScale();
+
+            if (chart2.Series[0].Points.Count > 20) chart2.Series[0].Points.RemoveAt(0);
+            if (chart2.Series[1].Points.Count > 20) chart2.Series[1].Points.RemoveAt(0);
+            chart2.Series[0].Points.AddXY(DateTime.Now.ToString(), randNum3);
+            chart2.Series[1].Points.AddXY(DateTime.Now.ToString(), randNum4);
+            chart2.ChartAreas[0].RecalculateAxesScale();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
