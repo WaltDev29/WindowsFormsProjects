@@ -175,13 +175,7 @@ namespace PLC_Test_0604_2
             {
                 liftA_up();
                 liftB_up();
-            }
-            if (!liftA_sens && !liftB_sens)
-            {
-                liftA_up();
-                liftB_up();
-            }
-
+            }            
             if (cylB) cylB_mvB();
             if (cylC) cylC_mvB();
 
